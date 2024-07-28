@@ -1,4 +1,4 @@
-# CS 442 MP4: Flashcards
+Flashcards
 
 ## 1. Overview
 
@@ -86,8 +86,6 @@ We have included the following packages in the `pubspec.yaml` file:
 - [`path_provider`](https://pub.dev/packages/path_provider): provides a platform-agnostic way to access commonly used locations on the filesystem
 - [`path`](https://pub.dev/packages/path): provides common operations for manipulating paths
 
-**Do not add any additional packages to your `pubspec.yaml` file without first consulting with us.**
-
 ### 3.2. Database
 
 You should use the [`sqflite`](https://pub.dev/packages/sqflite) package to persist your data to a local SQLite database. You should maintain a separate table for decks and cards, linked by a foreign key. Be sure to use `path_provider` and `path` (as demonstrated in [05_persistence/db_helper.dart](https://github.com/cs442app/demos/blob/main/05_persistence/lib/utils/db_helper.dart)) to correctly place the database file.
@@ -117,25 +115,3 @@ Your app should not cause the UI to block while performing any asynchronous oper
 In your `REPORT.md` file, please indicate which of the listed platforms you have tested your app on. We will test your application by building and running it in one of your selected platforms, and manually verifying that it meets the requirements outlined above. Note that because of SQLite and other platform-specific dependencies, you **should not expect your app to run in a web browser or as a native Windows app**.
 
 The minimum screen size we will test on is 320x568 logical pixels (iPhone 5), and the maximum screen size we will test on is 1920x1080 logical pixels (1080p). Your app should be responsive to and display correctly (without overflow errors) on all screen sizes in between.
-
-## 5. Grading
-
-This machine problem is worth 50 points, broken down as follows:
-
-- 2 points: A completed `REPORT.md` file with the required information. **Without this we will not evaluate your submission!**
-
-- 8 points: Decks can be created, edited, and deleted per the specifications above.
-
-- 8 points: Cards can be created, edited, sorted, and deleted per the specifications above.
-
-- 8 points: Quizzes can be run per the specifications above.
-
-- 4 points: Navigation between the different pages of the app works as specified above.
-
-- 4 points: Decks and cards can be loaded from the provided JSON file.
-
-- 12 points: Decks and cards are persisted correctly to a local database.
-
-- 4 points: The UI is responsive to changes in screen size.
-
-**If your code does not build, you will receive a zero for the machine problem.**
